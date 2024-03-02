@@ -105,9 +105,9 @@ cd ~/catkin_ws
 catkin_make
 source ./devel/setup.bash
 # 启动服务端
-
+rosrun learning_custom_action action_server
 # 启动客户端
-
+rosrun learning_custom_action action_client
 ```
 
 
