@@ -4,7 +4,7 @@ ros action是topic 和 service的结合，专门针对某些情况，比如客�
 
 工作结构图如下。
 
-![image-20240302163630589](/home/laiubt/CL/planning/ros_review_ws/src/learnings/learning_custom_action/docs/action.png)
+![image-20240302163630589](./docs/action.png)
 
 我们需要实现的部分有：
 
