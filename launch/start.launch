@@ -1,0 +1,4 @@
+<launch>
+  <node name="action_server" pkg="learning_custom_action" type="action_server" output="screen"/>
+  <node name="action_client" pkg="learning_custom_action" type="action_client" output="screen"/>
+</launch>
