@@ -1,18 +1,18 @@
 # action笔记
 
-ros action是topic 和 service的结合，专门针对某些情况，比如客户端给机器人下达目标点，机器人需要执行一段时间才能到达目标点，机器人执行过程中需要持续给客户端反馈。
+ros action是topic 和 service的结合升级版，专门针对某些特殊使用场景，执行时间、执行过程需要连续反馈，比如ros系统给机器人下达目标点，机器人运动到目标点需要一段时间，并且ros系统需要机器人连续的运动反馈，这是控制过程常见的场景。
 
 工作结构图如下。
 
 ![image-20240302163630589](./docs/action.png)
 
-我们需要实现的部分有：
+ROS官方已经为我们实现了内部细节，我们只需关注下面几个部分：
 
-1. 编写action文件
-2. 实现服务端
-3. 实现客户端
+1. 编写action文件。定义请求，返回，反馈，这三个部分。
+2. 实现服务端。创建action server。
+3. 实现客户端。创建action client。
 
-我们这里实现一个action，客户端给服务端发送一个数N，服务端从0开始计数到N，中间间隔1秒，连续给客户端反馈进度，计数结束再进行反馈。
+本项目实现自定义action，客户端给服务端发送一个数N，服务端从0开始计数到N，中间间隔1秒，连续给客户端反馈进度，计数结束再进行反馈。
 
 ## action文件
 
@@ -110,7 +110,8 @@ rosrun learning_custom_action action_server
 rosrun learning_custom_action action_client
 ```
 
-
+## 完整项目
+完整项目请查看github[仓库](https://github.com/LadissonLai/learning_custom_action)。
 
 
 
